@@ -1,17 +1,26 @@
-import * as YoutubeCommentApi from "../services/api/youtubeComment";
+import * as YoutubeCommentService from "../services/YoutubeCommentService";
 
 import { Container } from "react-bootstrap";
 import { HomeCss } from "../assets/css/home";
 import HomeTitle from "../components/home/homeTitle";
+import { Result } from "../services/types/commentsResult";
 import SearchForm from "../components/forms/searchForm";
 
-export const Home = () => {
+type Props = {
+  onResults: (results: Result) => void;
+};
+
+export const Home = ({ onResults }: Props) => {
   const handleSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (e.currentTarget["search-youtube-comments-input"].value) {
       const url = e.currentTarget["search-youtube-comments-input"].value;
-      // console.log(e.currentTarget["search-youtube-comments-input"].value);
-      YoutubeCommentApi.getComments(url).then(console.log).catch(console.log);
+      
+      YoutubeCommentService.getComments(url)
+        .then((res: Result) => {
+          onResults(res);
+        })
+        .catch((err) => console.log("err", err));
     }
   };
 

@@ -1,7 +1,6 @@
 export const HomeCss = () => `
    .home--body {
-        min-height: 100vh;
-        max-height: 100vh;
+        margin-top: 10vh;
    }
 
    .home--body-input {
