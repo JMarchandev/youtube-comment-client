@@ -2,6 +2,8 @@ export type Result = {
     items: Comment[];
     url: string;
     videoId: string;
+    nextPageToken: string;
+    complete: boolean;
 }
 
 export type Comment = {
