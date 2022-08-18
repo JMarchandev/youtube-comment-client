@@ -54,7 +54,7 @@ function App() {
 
   const handleExport = (type: "csv" | "json") => {
     if (commentsResult && commentsResult.items) {
-      ExportFileService.getDownloadableFile(type, commentsResult.items)
+      ExportFileService.getDownloadableFile(type, commentsResult)
         .then((res: any) => {
           const url = window.URL.createObjectURL(new Blob([res.data]));
           const link = document.createElement("a");
@@ -65,7 +65,7 @@ function App() {
         })
         .catch((err: any) => console.log("err", err));
     }
-  };  
+  };
 
   return (
     <>
