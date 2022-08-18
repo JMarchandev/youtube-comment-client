@@ -27,7 +27,11 @@ export const Comments = ({
     <Container>
       <VideoIframe videoId={videoId} />
       <DropdownButton
-        actions={[{ label: "CSV", handler: () => onExport("csv") }]}
+        title="Export"
+        actions={[
+          { label: "CSV", handler: () => onExport("csv") },
+          { label: "JSON", handler: () => onExport("json") },
+        ]}
       />
       <div>
         {comments.map((comment) => (

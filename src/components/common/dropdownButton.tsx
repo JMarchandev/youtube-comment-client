@@ -6,15 +6,21 @@ type Props = {
   className?: string;
   style?: React.CSSProperties;
   actions: ActionsExport[];
+  title: string;
 };
 
-export const CustomDropdownButton = ({ className, style, actions }: Props) => {
+export const CustomDropdownButton = ({
+  className,
+  style,
+  actions,
+  title,
+}: Props) => {
   return (
     <DropdownButton
       className={className}
       style={style}
       id="dropdown-basic-button"
-      title="Dropdown button"
+      title={title}
     >
       {actions.map((action) => (
         <Dropdown.Item key={action.label} onClick={action.handler}>
