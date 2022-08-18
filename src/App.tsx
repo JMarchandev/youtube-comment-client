@@ -51,12 +51,12 @@ function App() {
 
   const handleExport = (type: "csv" | "json") => {
     if (comments) {
-      ExportFileService.getCSVFile(comments)
+      ExportFileService.getDownloadableFile(type, comments)
         .then((res: any) => {
           const url = window.URL.createObjectURL(new Blob([res.data]));
           const link = document.createElement("a");
           link.href = url;
-          link.setAttribute("download", "yourfilename.csv");
+          link.setAttribute("download", `export-${Date.now()}-${type}.${type}`);
           document.body.appendChild(link);
           link.click();
         })
