@@ -3,7 +3,6 @@ import * as YoutubeCommentService from "./services/YoutubeCommentService";
 
 import { Comment, Result } from "./services/types/commentsResult";
 
-import { Button } from "react-bootstrap";
 import Comments from "./containers/comments";
 import { Home } from "./containers/home";
 import React from "react";
@@ -68,9 +67,6 @@ function App() {
   return (
     <>
       <Home onSubmitSearch={handleSubmitSearch} />
-      <Button className="w-100 my-3" onClick={() => handleExport("csv")}>
-        Load More
-      </Button>
       {resultInfos && comments && (
         <Comments
           isLoading={isLoading}
