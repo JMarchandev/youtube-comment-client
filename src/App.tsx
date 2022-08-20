@@ -1,23 +1,30 @@
 import * as ExportFileService from "./services/ExportFileService";
 import * as YoutubeCommentService from "./services/YoutubeCommentService";
 
+import Analyse from "./containers/analyzes";
 import Comments from "./containers/comments";
 import { Container } from "react-bootstrap";
 import { Home } from "./containers/home";
+import { LineAnalyse } from "./services/types/analyse";
 import React from "react";
 import { Result } from "./services/types/commentsResult";
 import VideoIframe from "./components/comments/videoIframe";
+import { commentLineAnalyzeFormater } from "./services/analyzeFormater";
 
 function App() {
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [commentsResult, setCommentsResult] = React.useState<null | Result>(
     null
   );
+  const [analyseLoading, setAnalyseLoading] = React.useState<boolean>(false)
+  const [analyse, setAnalyze] = React.useState<LineAnalyse | null>(null);
 
   const handleSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (e.currentTarget["search-youtube-comments-input"].value) {
       setIsLoading(true);
+      setCommentsResult(null);
+      setAnalyze(null);
       const url = e.currentTarget["search-youtube-comments-input"].value;
 
       YoutubeCommentService.getComments(url)
@@ -85,26 +92,43 @@ function App() {
   };
 
   const handleTriggerAnalyze = () => {
-    console.log("trigger");
+    if (commentsResult && commentsResult.items) {
+      setAnalyseLoading(true);
+      YoutubeCommentService.getAllComments(commentsResult)
+        .then((res: Result) => {
+          const analyseResult = commentLineAnalyzeFormater(res.items);
+          setAnalyze(analyseResult);
+        })
+        .catch((err: any) => console.log("err", err))
+        .finally(() => {
+          setAnalyseLoading(false);
+        });
+    }
   };
 
   return (
     <>
       <Home onSubmitSearch={handleSubmitSearch} />
-      {commentsResult && commentsResult.items && (
-        <Container>
-          <VideoIframe videoId={commentsResult.videoId} />
-          <Comments
-            onClickTriggerAnalyze={handleTriggerAnalyze}
-            isLoading={isLoading}
-            comments={commentsResult.items}
-            pagination={!commentsResult.complete}
-            onClickLoadMore={handleLoadMoreComments}
-            onClickLoadAll={handleLoadAllComments}
-            onExport={handleExport}
-          />
-        </Container>
-      )}
+      <Container>
+        {analyse && (
+          <Analyse publishAnalyse={analyse} />
+        )}
+        {commentsResult && commentsResult.items && (
+          <>
+            <VideoIframe videoId={commentsResult.videoId} />
+            <Comments
+              analyzeLoading={analyseLoading}
+              onClickTriggerAnalyze={handleTriggerAnalyze}
+              isLoading={isLoading}
+              comments={commentsResult.items}
+              pagination={!commentsResult.complete}
+              onClickLoadMore={handleLoadMoreComments}
+              onClickLoadAll={handleLoadAllComments}
+              onExport={handleExport}
+            />
+          </>
+        )}
+      </Container>
     </>
   );
 }

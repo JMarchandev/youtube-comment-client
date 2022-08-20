@@ -2,6 +2,7 @@ import { Button, Col, Row } from "react-bootstrap";
 
 import { Comment } from "../services/types/commentsResult";
 import { CommentCard } from "../components/comments/commentCardBody";
+import { CustomButton } from "../components/common/button";
 import { CustomDropdownButton as DropdownButton } from "../components/common/dropdownButton";
 import Spinner from "../components/common/spinner";
 
@@ -12,6 +13,7 @@ type Props = {
   onClickLoadAll: () => void;
   onClickTriggerAnalyze: () => void;
   isLoading: boolean;
+  analyzeLoading: boolean;
   onExport: (type: "csv" | "json") => void;
 };
 
@@ -22,6 +24,7 @@ export const Comments = ({
   onClickLoadMore,
   onClickLoadAll,
   isLoading,
+  analyzeLoading,
   onExport,
 }: Props) => {
   return (
@@ -38,12 +41,14 @@ export const Comments = ({
           />
         </Col>
         <Col>
-          <Button title="Trigger Analyze" onClick={onClickTriggerAnalyze}>
-            Trigger analyze
-          </Button>
+          <CustomButton
+            text="Trigger analyze"
+            isLoading={analyzeLoading}
+            onClick={onClickTriggerAnalyze}
+          />
         </Col>
       </Row>
-      
+
       <div>
         {comments.map((comment, i) => (
           <CommentCard
@@ -55,7 +60,9 @@ export const Comments = ({
           />
         ))}
       </div>
-      {isLoading && <Spinner className="d-flex justify-content-around my-3" />}
+      {isLoading && (
+        <Spinner as="border" className="d-flex justify-content-around my-3" />
+      )}
       {pagination && (
         <Row>
           <Col>
