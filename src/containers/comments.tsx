@@ -1,4 +1,4 @@
-import { Button, Container } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 
 import { Comment } from "../services/types/commentsResult";
 import { CommentCard } from "../components/comments/commentCardBody";
@@ -11,6 +11,7 @@ type Props = {
   videoId: string;
   pagination: boolean;
   onClickLoadMore: () => void;
+  onClickLoadAll: () => void;
   isLoading: boolean;
   onExport: (type: "csv" | "json") => void;
 };
@@ -20,6 +21,7 @@ export const Comments = ({
   videoId,
   pagination,
   onClickLoadMore,
+  onClickLoadAll,
   isLoading,
   onExport,
 }: Props) => {
@@ -34,7 +36,7 @@ export const Comments = ({
         ]}
       />
       <div>
-        {comments.map((comment) => (
+        {comments.map((comment, i) => (
           <CommentCard
             key={comment.id}
             textDisplay={comment.textDisplay}
@@ -46,11 +48,18 @@ export const Comments = ({
       </div>
       {isLoading && <Spinner className="d-flex justify-content-around my-3" />}
       {pagination && (
-        <div>
-          <Button className="w-100 my-3" onClick={onClickLoadMore}>
-            Load More
-          </Button>
-        </div>
+        <Row>
+          <Col>
+            <Button className="w-100 my-3" onClick={onClickLoadMore}>
+              Load More
+            </Button>
+          </Col>
+          <Col>
+            <Button className="w-100 my-3" onClick={onClickLoadAll}>
+              Load All
+            </Button>
+          </Col>
+        </Row>
       )}
     </Container>
   );

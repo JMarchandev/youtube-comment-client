@@ -29,7 +29,7 @@ function App() {
     }
   };
 
-  const handleLoadMore = () => {
+  const handleLoadMoreComments = () => {
     if (commentsResult) {
       setIsLoading(true);
 
@@ -44,6 +44,21 @@ function App() {
             items: [...lastComments, ...res.items],
           };
           setCommentsResult(response);
+        })
+        .catch((err: any) => console.log("err", err))
+        .finally(() => {
+          setIsLoading(false);
+        });
+    }
+  };
+
+  const handleLoadAllComments = () => {
+    if (commentsResult) {
+      setIsLoading(true);
+
+      YoutubeCommentService.getAllComments(commentsResult)
+        .then((res: Result) => {
+          setCommentsResult(res);
         })
         .catch((err: any) => console.log("err", err))
         .finally(() => {
@@ -76,7 +91,8 @@ function App() {
           comments={commentsResult.items}
           videoId={commentsResult.videoId}
           pagination={!commentsResult.complete}
-          onClickLoadMore={handleLoadMore}
+          onClickLoadMore={handleLoadMoreComments}
+          onClickLoadAll={handleLoadAllComments}
           onExport={handleExport}
         />
       )}
