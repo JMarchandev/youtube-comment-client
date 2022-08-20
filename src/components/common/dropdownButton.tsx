@@ -19,7 +19,6 @@ export const CustomDropdownButton = ({
     <DropdownButton
       className={className}
       style={style}
-      id="dropdown-basic-button"
       title={title}
     >
       {actions.map((action) => (

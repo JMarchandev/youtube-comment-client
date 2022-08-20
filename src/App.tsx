@@ -2,9 +2,11 @@ import * as ExportFileService from "./services/ExportFileService";
 import * as YoutubeCommentService from "./services/YoutubeCommentService";
 
 import Comments from "./containers/comments";
+import { Container } from "react-bootstrap";
 import { Home } from "./containers/home";
 import React from "react";
 import { Result } from "./services/types/commentsResult";
+import VideoIframe from "./components/comments/videoIframe";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState(false);
@@ -86,15 +88,17 @@ function App() {
     <>
       <Home onSubmitSearch={handleSubmitSearch} />
       {commentsResult && commentsResult.items && (
-        <Comments
-          isLoading={isLoading}
-          comments={commentsResult.items}
-          videoId={commentsResult.videoId}
-          pagination={!commentsResult.complete}
-          onClickLoadMore={handleLoadMoreComments}
-          onClickLoadAll={handleLoadAllComments}
-          onExport={handleExport}
-        />
+        <Container>
+          <VideoIframe videoId={commentsResult.videoId} />
+          <Comments
+            isLoading={isLoading}
+            comments={commentsResult.items}
+            pagination={!commentsResult.complete}
+            onClickLoadMore={handleLoadMoreComments}
+            onClickLoadAll={handleLoadAllComments}
+            onExport={handleExport}
+          />
+        </Container>
       )}
     </>
   );

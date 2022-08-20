@@ -26,15 +26,18 @@ export const Comments = ({
   onExport,
 }: Props) => {
   return (
-    <Container>
-      <VideoIframe videoId={videoId} />
-      <DropdownButton
-        title="Export"
-        actions={[
-          { label: "CSV", handler: () => onExport("csv") },
-          { label: "JSON", handler: () => onExport("json") },
-        ]}
-      />
+    <>
+      <Row>
+        <Col>
+          <DropdownButton
+            title="Export"
+            actions={[
+              { label: "CSV", handler: () => onExport("csv") },
+              { label: "JSON", handler: () => onExport("json") },
+            ]}
+            className="w-100"
+          />
+        </Col>
       <div>
         {comments.map((comment, i) => (
           <CommentCard
@@ -61,7 +64,7 @@ export const Comments = ({
           </Col>
         </Row>
       )}
-    </Container>
+    </>
   );
 };
 
