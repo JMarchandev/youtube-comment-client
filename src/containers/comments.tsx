@@ -1,24 +1,23 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 
 import { Comment } from "../services/types/commentsResult";
 import { CommentCard } from "../components/comments/commentCardBody";
 import { CustomDropdownButton as DropdownButton } from "../components/common/dropdownButton";
 import Spinner from "../components/common/spinner";
-import VideoIframe from "../components/comments/videoIframe";
 
 type Props = {
   comments: Comment[];
-  videoId: string;
   pagination: boolean;
   onClickLoadMore: () => void;
   onClickLoadAll: () => void;
+  onClickTriggerAnalyze: () => void;
   isLoading: boolean;
   onExport: (type: "csv" | "json") => void;
 };
 
 export const Comments = ({
   comments,
-  videoId,
+  onClickTriggerAnalyze,
   pagination,
   onClickLoadMore,
   onClickLoadAll,
@@ -38,6 +37,13 @@ export const Comments = ({
             className="w-100"
           />
         </Col>
+        <Col>
+          <Button title="Trigger Analyze" onClick={onClickTriggerAnalyze}>
+            Trigger analyze
+          </Button>
+        </Col>
+      </Row>
+      
       <div>
         {comments.map((comment, i) => (
           <CommentCard

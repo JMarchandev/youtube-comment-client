@@ -84,6 +84,10 @@ function App() {
     }
   };
 
+  const handleTriggerAnalyze = () => {
+    console.log("trigger");
+  };
+
   return (
     <>
       <Home onSubmitSearch={handleSubmitSearch} />
@@ -91,6 +95,7 @@ function App() {
         <Container>
           <VideoIframe videoId={commentsResult.videoId} />
           <Comments
+            onClickTriggerAnalyze={handleTriggerAnalyze}
             isLoading={isLoading}
             comments={commentsResult.items}
             pagination={!commentsResult.complete}
