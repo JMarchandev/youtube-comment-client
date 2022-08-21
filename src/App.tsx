@@ -1,14 +1,13 @@
+import * as AnalyzeService from "./services/AnalyzeService";
 import * as ExportFileService from "./services/ExportFileService";
 import * as YoutubeCommentService from "./services/YoutubeCommentService";
 
 import {
-  getLanguageCommentAnalyze,
-  getPublishCommentAnalyze,
-  getSentimentScoreCommentAnalyze,
-} from "./services/analyzeFormater";
+  AnalyseResult,
+  Analyse as AnalyzeType,
+} from "./services/types/analyse";
 
 import Analyse from "./containers/analyzes";
-import { Analyse as AnalyzeType } from "./services/types/analyse";
 import Comments from "./containers/comments";
 import { Container } from "react-bootstrap";
 import { Home } from "./containers/home";
@@ -103,15 +102,14 @@ function App() {
   const handleTriggerAnalyze = () => {
     if (commentsResult && commentsResult.items) {
       setAnalyseLoading(true);
-      YoutubeCommentService.getAllComments(commentsResult)
-        .then((res: Result) => {
-          const publishAnalyse = getPublishCommentAnalyze(res.items);
-          const sentimentAnalyse = getSentimentScoreCommentAnalyze(res.items);
-          const languageAnalyse = getLanguageCommentAnalyze(res.items);
+      AnalyzeService.getAllAnalyzes(commentsResult)
+        .then((res: AnalyseResult) => {
+          console.log("res", res);
+          
           setAnalyze({
-            publish: publishAnalyse,
-            sentiment: sentimentAnalyse,
-            language: languageAnalyse,
+            publish: res.publish,
+            sentiment: res.sentiment,
+            language: res.language,
           });
         })
         .catch((err: any) => console.log("err", err))
