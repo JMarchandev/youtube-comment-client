@@ -13,4 +13,7 @@ export type Comment = {
     textDisplay: string;
     updatedAt: string;
     likeCount: number;
+    sentimentScore?: number | 'not available';
+    language?: string | 'not available';
+    languageCode?: string | null;
 }

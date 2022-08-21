@@ -1,23 +1,32 @@
 import * as ExportFileService from "./services/ExportFileService";
 import * as YoutubeCommentService from "./services/YoutubeCommentService";
 
+import {
+  getLanguageCommentAnalyze,
+  getPublishCommentAnalyze,
+  getSentimentScoreCommentAnalyze,
+} from "./services/analyzeFormater";
+
 import Analyse from "./containers/analyzes";
+import { Analyse as AnalyzeType } from "./services/types/analyse";
 import Comments from "./containers/comments";
 import { Container } from "react-bootstrap";
 import { Home } from "./containers/home";
-import { LineAnalyse } from "./services/types/analyse";
 import React from "react";
 import { Result } from "./services/types/commentsResult";
 import VideoIframe from "./components/comments/videoIframe";
-import { commentLineAnalyzeFormater } from "./services/analyzeFormater";
 
 function App() {
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const [commentsResult, setCommentsResult] = React.useState<null | Result>(
     null
   );
-  const [analyseLoading, setAnalyseLoading] = React.useState<boolean>(false)
-  const [analyse, setAnalyze] = React.useState<LineAnalyse | null>(null);
+  const [analyseLoading, setAnalyseLoading] = React.useState<boolean>(false);
+  const [analyse, setAnalyze] = React.useState<{
+    sentiment: AnalyzeType;
+    publish: AnalyzeType;
+    language: AnalyzeType;
+  } | null>(null);
 
   const handleSubmitSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -96,8 +105,14 @@ function App() {
       setAnalyseLoading(true);
       YoutubeCommentService.getAllComments(commentsResult)
         .then((res: Result) => {
-          const analyseResult = commentLineAnalyzeFormater(res.items);
-          setAnalyze(analyseResult);
+          const publishAnalyse = getPublishCommentAnalyze(res.items);
+          const sentimentAnalyse = getSentimentScoreCommentAnalyze(res.items);
+          const languageAnalyse = getLanguageCommentAnalyze(res.items);
+          setAnalyze({
+            publish: publishAnalyse,
+            sentiment: sentimentAnalyse,
+            language: languageAnalyse,
+          });
         })
         .catch((err: any) => console.log("err", err))
         .finally(() => {
@@ -110,8 +125,12 @@ function App() {
     <>
       <Home onSubmitSearch={handleSubmitSearch} />
       <Container>
-        {analyse && (
-          <Analyse publishAnalyse={analyse} />
+        {analyse && analyse.publish && analyse.sentiment && (
+          <Analyse
+            publishAnalyse={analyse.publish}
+            sentimentAnalyse={analyse.sentiment}
+            languageAnalyse={analyse.language}
+          />
         )}
         {commentsResult && commentsResult.items && (
           <>

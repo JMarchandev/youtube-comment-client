@@ -1,4 +1,6 @@
-export const fakeData = [
+import { Comment } from "./types/commentsResult";
+
+export const fakeData: Comment[] = [
     {
         "id": "Ugyl1P04gf0jUNRglU54AaABAg",
         "textDisplay": "Will I be charged after the frontegg trial ends?",
@@ -6,7 +8,9 @@ export const fakeData = [
         "publishedAt": "2022-08-16T22:09:28Z",
         "updatedAt": "2022-08-16T22:09:28Z",
         "likeCount": 0,
-        "sentimentScore": -3
+        "sentimentScore": -3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwNUdOLLgVK7ocnQw94AaABAg",
@@ -15,7 +19,9 @@ export const fakeData = [
         "publishedAt": "2022-08-11T20:29:10Z",
         "updatedAt": "2022-08-11T20:29:10Z",
         "likeCount": 0,
-        "sentimentScore": -3
+        "sentimentScore": -3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugx_qzOEbsL9-z7_MR94AaABAg",
@@ -24,7 +30,9 @@ export const fakeData = [
         "publishedAt": "2022-08-11T20:28:42Z",
         "updatedAt": "2022-08-11T20:28:42Z",
         "likeCount": 0,
-        "sentimentScore": -3
+        "sentimentScore": -3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxzX07Ot2XVvD0On8l4AaABAg",
@@ -33,7 +41,9 @@ export const fakeData = [
         "publishedAt": "2022-08-11T12:23:18Z",
         "updatedAt": "2022-08-11T12:23:18Z",
         "likeCount": 0,
-        "sentimentScore": 2
+        "sentimentScore": 2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugxpv6T62fXxbltjkWF4AaABAg",
@@ -42,7 +52,9 @@ export const fakeData = [
         "publishedAt": "2022-08-10T04:04:05Z",
         "updatedAt": "2022-08-10T04:04:05Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxlbJudKkypASaUUmR4AaABAg",
@@ -51,7 +63,9 @@ export const fakeData = [
         "publishedAt": "2022-08-07T11:53:05Z",
         "updatedAt": "2022-08-07T11:53:05Z",
         "likeCount": 0,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugymt2Q1oy2AcbMdqiF4AaABAg",
@@ -60,7 +74,9 @@ export const fakeData = [
         "publishedAt": "2022-08-06T11:53:31Z",
         "updatedAt": "2022-08-06T11:53:31Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "hungarian",
+        "languageCode": "hu"
     },
     {
         "id": "Ugyv2da6gC67G4eGm1t4AaABAg",
@@ -69,7 +85,9 @@ export const fakeData = [
         "publishedAt": "2022-08-04T19:03:07Z",
         "updatedAt": "2022-08-04T19:03:07Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugya78wWJo_qAz3hNiV4AaABAg",
@@ -78,7 +96,9 @@ export const fakeData = [
         "publishedAt": "2022-08-04T11:39:13Z",
         "updatedAt": "2022-08-04T11:39:13Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "croatian",
+        "languageCode": "hr"
     },
     {
         "id": "UgxynZZskAx4WuzEHrl4AaABAg",
@@ -87,7 +107,9 @@ export const fakeData = [
         "publishedAt": "2022-08-04T11:10:15Z",
         "updatedAt": "2022-08-04T11:10:15Z",
         "likeCount": 0,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugwc71Nyp8lnY0U_CYp4AaABAg",
@@ -96,7 +118,9 @@ export const fakeData = [
         "publishedAt": "2022-08-04T08:00:13Z",
         "updatedAt": "2022-08-04T08:00:45Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "french",
+        "languageCode": "fr"
     },
     {
         "id": "Ugx_YBuwgqN1E-LFUud4AaABAg",
@@ -105,7 +129,9 @@ export const fakeData = [
         "publishedAt": "2022-08-03T16:53:42Z",
         "updatedAt": "2022-08-03T16:53:42Z",
         "likeCount": 1,
-        "sentimentScore": 1
+        "sentimentScore": 1,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzVxfo2TpW5nIxahQ54AaABAg",
@@ -114,7 +140,9 @@ export const fakeData = [
         "publishedAt": "2022-08-03T13:53:15Z",
         "updatedAt": "2022-08-03T13:53:15Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "norwegian",
+        "languageCode": "no"
     },
     {
         "id": "UgzOi9Oxb8DOCotffRR4AaABAg",
@@ -123,7 +151,9 @@ export const fakeData = [
         "publishedAt": "2022-08-03T13:51:09Z",
         "updatedAt": "2022-08-03T13:51:09Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwCWF-rwgSv4SElWbt4AaABAg",
@@ -132,7 +162,9 @@ export const fakeData = [
         "publishedAt": "2022-08-03T13:20:12Z",
         "updatedAt": "2022-08-03T13:20:12Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzQ4lYXoUEak6zgnPZ4AaABAg",
@@ -141,7 +173,9 @@ export const fakeData = [
         "publishedAt": "2022-08-02T13:22:07Z",
         "updatedAt": "2022-08-02T13:22:07Z",
         "likeCount": 1,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugzq3FOzhRATObEao514AaABAg",
@@ -150,7 +184,9 @@ export const fakeData = [
         "publishedAt": "2022-08-02T13:19:51Z",
         "updatedAt": "2022-08-02T13:19:51Z",
         "likeCount": 1,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "swedish",
+        "languageCode": "sv"
     },
     {
         "id": "UgxvvAXhUMFoT8rOprl4AaABAg",
@@ -159,7 +195,9 @@ export const fakeData = [
         "publishedAt": "2022-08-01T19:17:04Z",
         "updatedAt": "2022-08-01T19:17:04Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "croatian",
+        "languageCode": "hr"
     },
     {
         "id": "UgwGd-77h6vNIwMMYsp4AaABAg",
@@ -168,7 +206,9 @@ export const fakeData = [
         "publishedAt": "2022-08-01T18:40:52Z",
         "updatedAt": "2022-08-01T18:40:52Z",
         "likeCount": 1,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "ukrainian",
+        "languageCode": "uk"
     },
     {
         "id": "UgywPIqVqIjEwnoFwX54AaABAg",
@@ -177,7 +217,9 @@ export const fakeData = [
         "publishedAt": "2022-08-01T11:59:56Z",
         "updatedAt": "2022-08-01T12:00:14Z",
         "likeCount": 0,
-        "sentimentScore": 8
+        "sentimentScore": 8,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugyvvw80uX3nhQLMcBR4AaABAg",
@@ -186,7 +228,9 @@ export const fakeData = [
         "publishedAt": "2022-08-01T10:43:33Z",
         "updatedAt": "2022-08-01T10:43:33Z",
         "likeCount": 0,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzavBYhCXI8La2JjnR4AaABAg",
@@ -195,7 +239,9 @@ export const fakeData = [
         "publishedAt": "2022-07-31T23:24:25Z",
         "updatedAt": "2022-07-31T23:24:25Z",
         "likeCount": 0,
-        "sentimentScore": 7
+        "sentimentScore": 7,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzLlzcafUfYJDjxgD54AaABAg",
@@ -204,7 +250,9 @@ export const fakeData = [
         "publishedAt": "2022-07-31T20:38:33Z",
         "updatedAt": "2022-07-31T20:38:33Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "lithuanian",
+        "languageCode": "lt"
     },
     {
         "id": "UgwTXl-21FU76OfIh914AaABAg",
@@ -213,7 +261,9 @@ export const fakeData = [
         "publishedAt": "2022-07-31T16:33:02Z",
         "updatedAt": "2022-07-31T16:33:02Z",
         "likeCount": 1,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxheZ6h8bKlNhcBj554AaABAg",
@@ -222,7 +272,9 @@ export const fakeData = [
         "publishedAt": "2022-07-30T20:00:32Z",
         "updatedAt": "2022-07-30T20:00:32Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "not available",
+        "languageCode": null
     },
     {
         "id": "Ugzc8TpeNiWUE4CO6It4AaABAg",
@@ -231,7 +283,9 @@ export const fakeData = [
         "publishedAt": "2022-07-30T19:50:37Z",
         "updatedAt": "2022-07-30T19:50:37Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "hawaiian",
+        "languageCode": "haw"
     },
     {
         "id": "UgwwHhop8wQizecNfvR4AaABAg",
@@ -240,7 +294,9 @@ export const fakeData = [
         "publishedAt": "2022-07-29T18:30:21Z",
         "updatedAt": "2022-07-29T18:30:21Z",
         "likeCount": 0,
-        "sentimentScore": -2
+        "sentimentScore": -2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwJ0iM4EqjR20ho7Q14AaABAg",
@@ -249,7 +305,9 @@ export const fakeData = [
         "publishedAt": "2022-07-29T17:40:33Z",
         "updatedAt": "2022-07-29T17:40:33Z",
         "likeCount": 0,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxJU8Sa6tMfooul9BB4AaABAg",
@@ -258,7 +316,9 @@ export const fakeData = [
         "publishedAt": "2022-07-29T15:58:40Z",
         "updatedAt": "2022-07-29T15:58:40Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugz-oyic-wEj28QjJVB4AaABAg",
@@ -267,7 +327,9 @@ export const fakeData = [
         "publishedAt": "2022-07-29T13:50:11Z",
         "updatedAt": "2022-07-29T13:50:11Z",
         "likeCount": 0,
-        "sentimentScore": 1
+        "sentimentScore": 1,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "Ugwps76rZL4J1wAg8ZV4AaABAg",
@@ -276,7 +338,9 @@ export const fakeData = [
         "publishedAt": "2022-07-29T12:46:49Z",
         "updatedAt": "2022-07-29T12:46:49Z",
         "likeCount": 0,
-        "sentimentScore": 2
+        "sentimentScore": 2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugz-MMxfmwuGC_6Hm2Z4AaABAg",
@@ -285,7 +349,9 @@ export const fakeData = [
         "publishedAt": "2022-07-29T03:17:59Z",
         "updatedAt": "2022-07-29T03:17:59Z",
         "likeCount": 0,
-        "sentimentScore": 2
+        "sentimentScore": 2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugw0vizWt-mrudkBJuB4AaABAg",
@@ -294,7 +360,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T22:42:58Z",
         "updatedAt": "2022-07-28T22:42:58Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "Ugx5T-LI6i7eUfK1lTp4AaABAg",
@@ -303,7 +371,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T21:14:32Z",
         "updatedAt": "2022-07-28T21:14:32Z",
         "likeCount": 0,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzGOQfuQcqseje4sO94AaABAg",
@@ -312,7 +382,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T16:54:37Z",
         "updatedAt": "2022-07-28T16:54:37Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "czech",
+        "languageCode": "cs"
     },
     {
         "id": "UgyzAwfR7QVHuakOMO14AaABAg",
@@ -321,7 +393,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T16:05:57Z",
         "updatedAt": "2022-07-28T16:05:57Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "UgywQseLNJi0vWeV4BZ4AaABAg",
@@ -330,7 +404,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T15:55:57Z",
         "updatedAt": "2022-07-28T15:55:57Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "tagalog",
+        "languageCode": "tl"
     },
     {
         "id": "Ugw1PIEgHjirI4hlfsd4AaABAg",
@@ -339,7 +415,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T14:44:36Z",
         "updatedAt": "2022-07-28T14:44:36Z",
         "likeCount": 0,
-        "sentimentScore": -2
+        "sentimentScore": -2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugz_tc_jAUDiLwgeFcl4AaABAg",
@@ -348,7 +426,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T14:40:39Z",
         "updatedAt": "2022-07-28T14:40:39Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "Ugxt_TqDiH9UekMGBcN4AaABAg",
@@ -357,7 +437,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T13:13:59Z",
         "updatedAt": "2022-07-28T13:13:59Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "Ugy5zWcNGisdUTcHzD14AaABAg",
@@ -366,7 +448,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T11:20:46Z",
         "updatedAt": "2022-07-28T11:21:10Z",
         "likeCount": 0,
-        "sentimentScore": 2
+        "sentimentScore": 2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugxy7OcegpOgLpbjMel4AaABAg",
@@ -375,7 +459,9 @@ export const fakeData = [
         "publishedAt": "2022-07-28T08:55:11Z",
         "updatedAt": "2022-07-28T08:55:11Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "polish",
+        "languageCode": "pl"
     },
     {
         "id": "UgzuSN18UfC_rzbEtmN4AaABAg",
@@ -384,7 +470,9 @@ export const fakeData = [
         "publishedAt": "2022-07-27T22:03:31Z",
         "updatedAt": "2022-07-27T22:03:31Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugx6-mIGLAlwcZTHNcd4AaABAg",
@@ -393,7 +481,9 @@ export const fakeData = [
         "publishedAt": "2022-07-27T10:28:34Z",
         "updatedAt": "2022-07-27T10:28:34Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "french",
+        "languageCode": "fr"
     },
     {
         "id": "UgwFWE4G3NrDTWGJzXx4AaABAg",
@@ -402,7 +492,9 @@ export const fakeData = [
         "publishedAt": "2022-07-27T08:45:00Z",
         "updatedAt": "2022-07-27T08:45:00Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzOa_knKD9ChGQIiaR4AaABAg",
@@ -411,7 +503,9 @@ export const fakeData = [
         "publishedAt": "2022-07-26T07:47:13Z",
         "updatedAt": "2022-07-26T07:47:13Z",
         "likeCount": 0,
-        "sentimentScore": -8
+        "sentimentScore": -8,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzbatV3cOd2WiavOzJ4AaABAg",
@@ -420,7 +514,9 @@ export const fakeData = [
         "publishedAt": "2022-07-26T02:48:32Z",
         "updatedAt": "2022-07-26T02:48:32Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "czech",
+        "languageCode": "cs"
     },
     {
         "id": "Ugxs2qCtMEIkaN3SnO14AaABAg",
@@ -429,7 +525,9 @@ export const fakeData = [
         "publishedAt": "2022-07-25T19:50:57Z",
         "updatedAt": "2022-07-25T19:50:57Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "dutch",
+        "languageCode": "nl"
     },
     {
         "id": "UgxNYqPHkV5CyOAQ1lt4AaABAg",
@@ -438,7 +536,9 @@ export const fakeData = [
         "publishedAt": "2022-07-25T17:24:03Z",
         "updatedAt": "2022-07-25T17:24:03Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugy5BDapOdaVy0xEcn14AaABAg",
@@ -447,7 +547,9 @@ export const fakeData = [
         "publishedAt": "2022-07-25T10:36:24Z",
         "updatedAt": "2022-07-25T10:36:24Z",
         "likeCount": 0,
-        "sentimentScore": 1
+        "sentimentScore": 1,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwIP-g8JZVLAJ39qcN4AaABAg",
@@ -456,7 +558,9 @@ export const fakeData = [
         "publishedAt": "2022-07-24T23:43:48Z",
         "updatedAt": "2022-07-24T23:43:48Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "swedish",
+        "languageCode": "sv"
     },
     {
         "id": "UgweqrhTpvweqh4WRBN4AaABAg",
@@ -465,7 +569,9 @@ export const fakeData = [
         "publishedAt": "2022-07-24T12:52:51Z",
         "updatedAt": "2022-07-24T12:52:51Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "indonesian",
+        "languageCode": "id"
     },
     {
         "id": "UgwwtKFPlDQRtwRJAzJ4AaABAg",
@@ -474,7 +580,9 @@ export const fakeData = [
         "publishedAt": "2022-07-23T16:29:43Z",
         "updatedAt": "2022-07-23T16:29:43Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "romanian",
+        "languageCode": "ro"
     },
     {
         "id": "Ugx7kZPt8nbyrY3ZHQl4AaABAg",
@@ -483,7 +591,9 @@ export const fakeData = [
         "publishedAt": "2022-07-23T11:03:36Z",
         "updatedAt": "2022-07-23T11:03:36Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "norwegian",
+        "languageCode": "no"
     },
     {
         "id": "UgwD-82AMV9aeW8Q4Xl4AaABAg",
@@ -492,7 +602,9 @@ export const fakeData = [
         "publishedAt": "2022-07-22T23:26:13Z",
         "updatedAt": "2022-07-22T23:26:13Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxLEOQDx7ZVxP8oDmx4AaABAg",
@@ -501,7 +613,9 @@ export const fakeData = [
         "publishedAt": "2022-07-22T21:22:35Z",
         "updatedAt": "2022-07-22T21:22:35Z",
         "likeCount": 0,
-        "sentimentScore": -2
+        "sentimentScore": -2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgyvzRkHiMSkThyEb1l4AaABAg",
@@ -510,7 +624,9 @@ export const fakeData = [
         "publishedAt": "2022-07-22T18:07:55Z",
         "updatedAt": "2022-07-22T18:08:03Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxdLmPT41sKDX2ZFlx4AaABAg",
@@ -519,7 +635,9 @@ export const fakeData = [
         "publishedAt": "2022-07-21T20:41:09Z",
         "updatedAt": "2022-07-21T20:41:09Z",
         "likeCount": 0,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugz3a3K5k6vqNcR67b14AaABAg",
@@ -528,7 +646,9 @@ export const fakeData = [
         "publishedAt": "2022-07-21T00:05:56Z",
         "updatedAt": "2022-07-21T00:05:56Z",
         "likeCount": 2,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwFLL01Ip9ztA3XVU94AaABAg",
@@ -537,7 +657,9 @@ export const fakeData = [
         "publishedAt": "2022-07-20T19:44:05Z",
         "updatedAt": "2022-07-20T19:44:05Z",
         "likeCount": 3,
-        "sentimentScore": 9
+        "sentimentScore": 9,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "UgyDrGNE_UivY77nBa14AaABAg",
@@ -546,7 +668,9 @@ export const fakeData = [
         "publishedAt": "2022-07-20T07:20:04Z",
         "updatedAt": "2022-07-20T07:20:04Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "romanian",
+        "languageCode": "ro"
     },
     {
         "id": "UgwtSrPwH4Dp8PLMtXp4AaABAg",
@@ -555,7 +679,9 @@ export const fakeData = [
         "publishedAt": "2022-07-19T09:17:54Z",
         "updatedAt": "2022-07-19T09:17:54Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "croatian",
+        "languageCode": "hr"
     },
     {
         "id": "Ugxmb9eXsQMTsV_h32N4AaABAg",
@@ -564,7 +690,9 @@ export const fakeData = [
         "publishedAt": "2022-07-19T02:12:31Z",
         "updatedAt": "2022-07-19T02:12:31Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxTQbb3P8Xkb0Iv_5B4AaABAg",
@@ -573,7 +701,9 @@ export const fakeData = [
         "publishedAt": "2022-07-16T23:02:54Z",
         "updatedAt": "2022-07-16T23:02:54Z",
         "likeCount": 6,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwhTnV966glu-g691l4AaABAg",
@@ -582,7 +712,9 @@ export const fakeData = [
         "publishedAt": "2022-07-16T19:36:15Z",
         "updatedAt": "2022-07-16T19:36:15Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "Ugyy5kzIvkEfSfnGAat4AaABAg",
@@ -591,7 +723,9 @@ export const fakeData = [
         "publishedAt": "2022-07-16T19:26:47Z",
         "updatedAt": "2022-07-16T19:26:47Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "tagalog",
+        "languageCode": "tl"
     },
     {
         "id": "UgwANclsc_KSLUcEbtx4AaABAg",
@@ -600,7 +734,9 @@ export const fakeData = [
         "publishedAt": "2022-07-15T11:56:22Z",
         "updatedAt": "2022-07-15T11:56:22Z",
         "likeCount": 0,
-        "sentimentScore": 1
+        "sentimentScore": 1,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwIotM0xFP0H6q73xZ4AaABAg",
@@ -609,7 +745,9 @@ export const fakeData = [
         "publishedAt": "2022-07-14T18:46:57Z",
         "updatedAt": "2022-07-14T18:46:57Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "Ugx_A0xhcHfkHZGCnlN4AaABAg",
@@ -618,7 +756,9 @@ export const fakeData = [
         "publishedAt": "2022-07-14T12:36:07Z",
         "updatedAt": "2022-07-14T12:36:07Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "norwegian",
+        "languageCode": "no"
     },
     {
         "id": "UgwwKzsZ2p8m399xYfh4AaABAg",
@@ -627,7 +767,9 @@ export const fakeData = [
         "publishedAt": "2022-07-14T00:15:56Z",
         "updatedAt": "2022-07-14T00:15:56Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgyEm8QlDKVDg0JiKxJ4AaABAg",
@@ -636,7 +778,9 @@ export const fakeData = [
         "publishedAt": "2022-07-13T19:51:34Z",
         "updatedAt": "2022-07-13T19:51:34Z",
         "likeCount": 0,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "UgwWj5E5jhT7cYINII14AaABAg",
@@ -645,7 +789,9 @@ export const fakeData = [
         "publishedAt": "2022-07-13T08:12:00Z",
         "updatedAt": "2022-07-13T08:12:00Z",
         "likeCount": 0,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgyoQh0pKrERY4G5bIN4AaABAg",
@@ -654,7 +800,9 @@ export const fakeData = [
         "publishedAt": "2022-07-12T02:58:07Z",
         "updatedAt": "2022-07-12T02:58:07Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "italian",
+        "languageCode": "it"
     },
     {
         "id": "UgyRoEI_QcE0hU8wMy94AaABAg",
@@ -663,7 +811,9 @@ export const fakeData = [
         "publishedAt": "2022-07-11T18:57:12Z",
         "updatedAt": "2022-07-11T18:57:12Z",
         "likeCount": 2,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "estonian",
+        "languageCode": "et"
     },
     {
         "id": "UgzK4MebzneBkzmyZzJ4AaABAg",
@@ -672,7 +822,9 @@ export const fakeData = [
         "publishedAt": "2022-07-11T06:51:52Z",
         "updatedAt": "2022-07-11T06:52:27Z",
         "likeCount": 1,
-        "sentimentScore": -1
+        "sentimentScore": -1,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "Ugykn4Kf5usS_yCH0bB4AaABAg",
@@ -681,7 +833,9 @@ export const fakeData = [
         "publishedAt": "2022-07-11T06:46:01Z",
         "updatedAt": "2022-07-11T06:46:01Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwSINxsRqrAg1pde_d4AaABAg",
@@ -690,7 +844,9 @@ export const fakeData = [
         "publishedAt": "2022-07-11T03:22:03Z",
         "updatedAt": "2022-07-11T03:22:03Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "UgyFYpuPeHxecjxnPNx4AaABAg",
@@ -699,7 +855,9 @@ export const fakeData = [
         "publishedAt": "2022-07-11T00:17:51Z",
         "updatedAt": "2022-07-11T00:17:51Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugw3OgVe6ru4rbR5yxx4AaABAg",
@@ -708,7 +866,9 @@ export const fakeData = [
         "publishedAt": "2022-07-10T22:27:19Z",
         "updatedAt": "2022-07-10T22:27:19Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "UgyXksygcmXz-d2y6dN4AaABAg",
@@ -717,7 +877,9 @@ export const fakeData = [
         "publishedAt": "2022-07-10T14:16:41Z",
         "updatedAt": "2022-07-10T14:16:41Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugy-tZZ-Ww0HaV52idZ4AaABAg",
@@ -726,7 +888,9 @@ export const fakeData = [
         "publishedAt": "2022-07-10T13:15:03Z",
         "updatedAt": "2022-07-10T13:15:03Z",
         "likeCount": 0,
-        "sentimentScore": 10
+        "sentimentScore": 10,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugwk46ryK91vjA9d5h14AaABAg",
@@ -735,7 +899,9 @@ export const fakeData = [
         "publishedAt": "2022-07-10T11:18:55Z",
         "updatedAt": "2022-07-10T11:18:55Z",
         "likeCount": 1,
-        "sentimentScore": 1
+        "sentimentScore": 1,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwUCakZrVtGXY6f97V4AaABAg",
@@ -744,7 +910,9 @@ export const fakeData = [
         "publishedAt": "2022-07-10T10:06:34Z",
         "updatedAt": "2022-07-10T10:06:34Z",
         "likeCount": 0,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwSa96sOUc7oxVaef94AaABAg",
@@ -753,7 +921,9 @@ export const fakeData = [
         "publishedAt": "2022-07-10T08:13:46Z",
         "updatedAt": "2022-07-10T08:13:46Z",
         "likeCount": 3,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugwci9of4ueyD9996Ql4AaABAg",
@@ -762,7 +932,9 @@ export const fakeData = [
         "publishedAt": "2022-07-09T20:47:57Z",
         "updatedAt": "2022-07-09T20:47:57Z",
         "likeCount": 1,
-        "sentimentScore": 2
+        "sentimentScore": 2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxhsrmMtbIX2balfsN4AaABAg",
@@ -771,7 +943,9 @@ export const fakeData = [
         "publishedAt": "2022-07-09T15:11:02Z",
         "updatedAt": "2022-07-09T15:11:02Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxzBzFK6WJBc50Z9EN4AaABAg",
@@ -780,7 +954,9 @@ export const fakeData = [
         "publishedAt": "2022-07-09T14:41:21Z",
         "updatedAt": "2022-07-09T14:41:21Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "croatian",
+        "languageCode": "hr"
     },
     {
         "id": "Ugzn_57qwJPIW8fbOVh4AaABAg",
@@ -789,7 +965,9 @@ export const fakeData = [
         "publishedAt": "2022-07-09T03:21:29Z",
         "updatedAt": "2022-07-09T03:21:29Z",
         "likeCount": 0,
-        "sentimentScore": 1
+        "sentimentScore": 1,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzswaR9XVgBp84Ci1N4AaABAg",
@@ -798,7 +976,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T20:56:54Z",
         "updatedAt": "2022-07-08T20:56:54Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgyiVSnXI3YzO6zuIgJ4AaABAg",
@@ -807,7 +987,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T16:44:18Z",
         "updatedAt": "2022-07-08T16:44:18Z",
         "likeCount": 0,
-        "sentimentScore": -2
+        "sentimentScore": -2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxV0qs7GgH9Sjx-0854AaABAg",
@@ -816,7 +998,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T15:01:43Z",
         "updatedAt": "2022-07-08T15:01:43Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "UgzRJmE0XdHHHQnRMmx4AaABAg",
@@ -825,7 +1009,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T13:19:27Z",
         "updatedAt": "2022-07-08T13:19:44Z",
         "likeCount": 4,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "Ugz8-xc-sYiEu2r8t0l4AaABAg",
@@ -834,7 +1020,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T10:26:29Z",
         "updatedAt": "2022-07-08T10:26:29Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugz6pQgWyPKMq93ksnR4AaABAg",
@@ -843,7 +1031,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T09:05:05Z",
         "updatedAt": "2022-07-08T09:05:05Z",
         "likeCount": 3,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgybteiMpQ4xcIZIta94AaABAg",
@@ -852,7 +1042,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T07:09:16Z",
         "updatedAt": "2022-07-08T07:09:16Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "UgygD6Rf_u_siULJoOh4AaABAg",
@@ -861,7 +1053,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T06:07:13Z",
         "updatedAt": "2022-07-08T12:29:34Z",
         "likeCount": 1,
-        "sentimentScore": 6
+        "sentimentScore": 6,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugw16v331AVI88eX1-B4AaABAg",
@@ -870,7 +1064,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T05:48:08Z",
         "updatedAt": "2022-07-08T05:48:08Z",
         "likeCount": 1,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "icelandic",
+        "languageCode": "isl"
     },
     {
         "id": "UgyCuB7pN8J-2MmOEXd4AaABAg",
@@ -879,7 +1075,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T03:48:29Z",
         "updatedAt": "2022-07-08T03:48:29Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "slovene",
+        "languageCode": "sl"
     },
     {
         "id": "UgxwdabIQ8HhBy2Bunl4AaABAg",
@@ -888,7 +1086,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T03:38:16Z",
         "updatedAt": "2022-07-08T03:38:16Z",
         "likeCount": 1,
-        "sentimentScore": -1
+        "sentimentScore": -1,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugx6qTcR5Fq1z9POZ9t4AaABAg",
@@ -897,7 +1097,9 @@ export const fakeData = [
         "publishedAt": "2022-07-08T01:24:10Z",
         "updatedAt": "2022-07-08T01:24:10Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "french",
+        "languageCode": "fr"
     },
     {
         "id": "UgyXHKou9q36WTqboCt4AaABAg",
@@ -906,7 +1108,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T22:51:33Z",
         "updatedAt": "2022-07-07T22:51:33Z",
         "likeCount": 1,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugw-4Bm_lEsQZm7Tws14AaABAg",
@@ -915,7 +1119,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T22:12:28Z",
         "updatedAt": "2022-07-07T22:12:28Z",
         "likeCount": 3,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzZ47AIlDG7eZ_2mel4AaABAg",
@@ -924,7 +1130,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T20:57:30Z",
         "updatedAt": "2022-07-07T20:57:30Z",
         "likeCount": 0,
-        "sentimentScore": 2
+        "sentimentScore": 2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgyBQCUCSoE8Px6sRyl4AaABAg",
@@ -933,7 +1141,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T20:51:51Z",
         "updatedAt": "2022-07-07T20:51:51Z",
         "likeCount": 0,
-        "sentimentScore": -2
+        "sentimentScore": -2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgyOCdjur8OtFUeM4hF4AaABAg",
@@ -942,7 +1152,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T20:09:20Z",
         "updatedAt": "2022-07-07T20:09:20Z",
         "likeCount": 2,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugw5CV_-OFdgl9qvzX14AaABAg",
@@ -951,7 +1163,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T20:02:13Z",
         "updatedAt": "2022-07-07T20:02:13Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugxi7IGFSIUH3c_-hnB4AaABAg",
@@ -960,7 +1174,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T18:22:59Z",
         "updatedAt": "2022-07-07T18:22:59Z",
         "likeCount": 0,
-        "sentimentScore": 15
+        "sentimentScore": 15,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzsmclBvkqjIjTDoqV4AaABAg",
@@ -969,7 +1185,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T18:18:49Z",
         "updatedAt": "2022-07-07T18:18:49Z",
         "likeCount": 5,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgxInNSbb_V-8clYGuZ4AaABAg",
@@ -978,7 +1196,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T18:16:11Z",
         "updatedAt": "2022-07-07T18:16:11Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "UgwW9URmcN0YfI01jdh4AaABAg",
@@ -987,7 +1207,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T17:52:12Z",
         "updatedAt": "2022-07-07T17:52:12Z",
         "likeCount": 1,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "albanian",
+        "languageCode": "sq"
     },
     {
         "id": "UgzUOLOfS6v6U-pc7xN4AaABAg",
@@ -996,7 +1218,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T17:35:08Z",
         "updatedAt": "2022-07-07T17:35:31Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwttPrJoUH9fG9v3EB4AaABAg",
@@ -1005,7 +1229,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T17:20:31Z",
         "updatedAt": "2022-07-07T17:20:31Z",
         "likeCount": 1,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugz6vWTr2JLjoM5Ul5t4AaABAg",
@@ -1014,7 +1240,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T17:13:30Z",
         "updatedAt": "2022-07-07T17:13:30Z",
         "likeCount": 1,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzlauiLJgG1GL3aEh54AaABAg",
@@ -1023,7 +1251,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T17:09:57Z",
         "updatedAt": "2022-07-07T17:09:57Z",
         "likeCount": 0,
-        "sentimentScore": 0
+        "sentimentScore": 0,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugwnf1prMry7_NzvYY54AaABAg",
@@ -1032,7 +1262,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T17:07:51Z",
         "updatedAt": "2022-07-07T17:07:51Z",
         "likeCount": 6,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "Ugw8IKFI8ThUUi445oJ4AaABAg",
@@ -1041,7 +1273,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:33:02Z",
         "updatedAt": "2022-07-07T16:33:02Z",
         "likeCount": 132,
-        "sentimentScore": 1
+        "sentimentScore": 1,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwgOI-Y5IYaLrUlhll4AaABAg",
@@ -1050,7 +1284,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:32:03Z",
         "updatedAt": "2022-07-07T16:32:03Z",
         "likeCount": 0,
-        "sentimentScore": 7
+        "sentimentScore": 7,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "UgwqCx72IjRoDQOJ5ct4AaABAg",
@@ -1059,7 +1295,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:31:56Z",
         "updatedAt": "2022-07-07T16:31:56Z",
         "likeCount": 0,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugw7b1esZ9uobByzl2h4AaABAg",
@@ -1068,7 +1306,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:28:07Z",
         "updatedAt": "2022-07-07T16:28:07Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "latin",
+        "languageCode": "la"
     },
     {
         "id": "UgzhipBtqdWTLDAem5J4AaABAg",
@@ -1077,7 +1317,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:25:42Z",
         "updatedAt": "2022-07-07T16:25:42Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "spanish",
+        "languageCode": "es"
     },
     {
         "id": "UgyZ32Wwjg4zVrqWXPV4AaABAg",
@@ -1086,7 +1328,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:22:23Z",
         "updatedAt": "2022-07-07T16:22:23Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "albanian",
+        "languageCode": "sq"
     },
     {
         "id": "UgzHfahosr5qDUlevip4AaABAg",
@@ -1095,7 +1339,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:21:24Z",
         "updatedAt": "2022-07-07T16:21:24Z",
         "likeCount": 0,
-        "sentimentScore": 2
+        "sentimentScore": 2,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwRMDisbOQF00o4zcJ4AaABAg",
@@ -1104,7 +1350,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:16:57Z",
         "updatedAt": "2022-07-07T16:16:57Z",
         "likeCount": 19,
-        "sentimentScore": 9
+        "sentimentScore": 9,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "Ugx7xQgCX-LMnCWH17V4AaABAg",
@@ -1113,7 +1361,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T16:07:11Z",
         "updatedAt": "2022-07-07T16:07:11Z",
         "likeCount": 1,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "norwegian",
+        "languageCode": "no"
     },
     {
         "id": "UgzPd_KGEzjtNuAVGtl4AaABAg",
@@ -1122,7 +1372,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:58:41Z",
         "updatedAt": "2022-07-07T15:58:41Z",
         "likeCount": 1,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "portuguese",
+        "languageCode": "pt"
     },
     {
         "id": "UgyZMyxUNUdHwMuZtjd4AaABAg",
@@ -1131,7 +1383,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:53:02Z",
         "updatedAt": "2022-07-07T15:53:02Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "dutch",
+        "languageCode": "nl"
     },
     {
         "id": "UgxoZPM_VbIieveRolp4AaABAg",
@@ -1140,7 +1394,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:47:46Z",
         "updatedAt": "2022-07-07T15:47:46Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "french",
+        "languageCode": "fr"
     },
     {
         "id": "Ugz8nUC4qfiCk8KBKAl4AaABAg",
@@ -1149,7 +1405,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:46:41Z",
         "updatedAt": "2022-07-07T15:46:41Z",
         "likeCount": 1,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgwlBir9JlTowfAqwoZ4AaABAg",
@@ -1158,7 +1416,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:43:17Z",
         "updatedAt": "2022-07-07T15:43:17Z",
         "likeCount": 0,
-        "sentimentScore": 5
+        "sentimentScore": 5,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "UgxBJ-pkZUDdX4pMAQl4AaABAg",
@@ -1167,7 +1427,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:43:10Z",
         "updatedAt": "2022-07-07T15:43:10Z",
         "likeCount": 0,
-        "sentimentScore": 3
+        "sentimentScore": 3,
+        "language": "english",
+        "languageCode": "en"
     },
     {
         "id": "UgzgQKR8KnTBPi6m3LR4AaABAg",
@@ -1176,7 +1438,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:42:47Z",
         "updatedAt": "2022-07-07T15:42:47Z",
         "likeCount": 7,
-        "sentimentScore": 4
+        "sentimentScore": 4,
+        "language": "pidgin",
+        "languageCode": "en"
     },
     {
         "id": "Ugz2-Xcvi3oeE-18fQB4AaABAg",
@@ -1185,7 +1449,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:40:14Z",
         "updatedAt": "2022-07-07T15:40:14Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "somali",
+        "languageCode": "so"
     },
     {
         "id": "Ugyl9y8AwzrbPYSKncR4AaABAg",
@@ -1194,7 +1460,9 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:38:55Z",
         "updatedAt": "2022-07-07T15:38:55Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "cebuano",
+        "languageCode": "ceb"
     },
     {
         "id": "Ugwwt_SW4wqiYa9w-Zh4AaABAg",
@@ -1203,6 +1471,8 @@ export const fakeData = [
         "publishedAt": "2022-07-07T15:38:11Z",
         "updatedAt": "2022-07-07T15:38:11Z",
         "likeCount": 0,
-        "sentimentScore": "not available"
+        "sentimentScore": "not available",
+        "language": "not available",
+        "languageCode": null
     }
 ]

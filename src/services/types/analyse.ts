@@ -1,4 +1,4 @@
-export type LineAnalyse = {
-    x: string;
-    y: number;
+export type Analyse = {
+    x: number | string;
+    y: number | string;
 }[]

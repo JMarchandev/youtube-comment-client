@@ -1,14 +1,19 @@
 import { VictoryAxis, VictoryChart, VictoryLine } from "victory";
 
+import { Analyse } from "../../services/types/analyse";
+
 type Props = {
-  data: {
-    x: string;
-    y: number;
-  }[];
-  title: string;
+  data: Analyse;
+  title?: string;
+  options?: {
+    displayXAxisLabel?: boolean;
+    customXAxisLabel?: string;
+    XAxisLabelFont?: string;
+    XAxisLabelAngle?: number;
+  };
 };
 
-export const LineChart = ({ data, title }: Props) => {
+export const LineChart = ({ data, title, options }: Props) => {
   return (
     <VictoryChart
       height={200}
@@ -26,9 +31,34 @@ export const LineChart = ({ data, title }: Props) => {
         }}
         data={data}
       />
-      <VictoryAxis dependentAxis style={{ tickLabels: { fontSize: "7px" } }} />
       <VictoryAxis
-        style={{ tickLabels: { angle: 90, fontSize: "7px", padding: 20 } }}
+        dependentAxis
+        style={{
+          tickLabels: {
+            ...(options?.XAxisLabelFont
+              ? { fontSize: options.XAxisLabelFont }
+              : {}),
+          },
+        }}
+        offsetX={50}
+      />
+      <VictoryAxis
+        style={{
+          tickLabels: {
+            angle: options?.XAxisLabelAngle ?? 0,
+            ...(options?.XAxisLabelFont
+              ? { fontSize: options.XAxisLabelFont }
+              : {}),
+            padding: 20,
+            fill: options?.displayXAxisLabel === false ? "transparent" : null,
+            ...(options?.XAxisLabelFont
+              ? { fontSize: options.XAxisLabelFont }
+              : {}),
+          },
+        }}
+        {...(options?.customXAxisLabel
+          ? { label: options.customXAxisLabel }
+          : {})}
       />
     </VictoryChart>
   );
